@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/timerDisplay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <!-- Current Duration Label -->
+        <TextView
+            android:id="@+id/txtSongCurrentDuration"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="0:00"
+            android:textColor="@android:color/darker_gray"
+            android:textStyle="bold" />
+        <!-- Total Duration Label -->
+        <TextView
+            android:id="@+id/txtSongTotalDuration"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="0:00"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/songSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/ic_play_arrow_white_24dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_previous"
+            app:backgroundTint="@android:color/white"
+            app:fabSize="mini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/fab_play"
+            android:src="@drawable/ic_skip_previous_black_36dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_next"
+            app:backgroundTint="@android:color/white"
+            app:fabSize="mini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/fab_play"
+            android:src="@drawable/ic_skip_next_black_36dp" />
+
+        <ImageView
+            android:id="@+id/imgSongRewind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@+id/fab_previous"
+            android:src="@drawable/ic_fast_rewind_black_36dp" />
+
+        <ImageView
+            android:id="@+id/imgSongForward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/fab_next"
+            android:src="@drawable/ic_fast_forward_black_36dp" />
+    </RelativeLayout>
+</LinearLayout>
